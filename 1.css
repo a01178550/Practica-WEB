@@ -141,3 +141,35 @@ button[type="button"] {
 button[type="button"]:hover {
   background: #eff6ff;
 }
+/* ===== Card genérica para pantallas (menú/pantallas) ===== */
+.card{
+  width: 100%;
+  max-width: 420px;
+  background: #fff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+}
+
+/* ===== Menú ===== */
+.menu{
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 10px;
+}
+
+.menu-item{
+  text-decoration: none;
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #2563eb;
+  color: #2563eb;
+  font-weight: 600;
+  text-align: center;
+  transition: 0.2s;
+}
+
+.menu-item:hover{
+  background: #eff6ff;
+}
