@@ -1,0 +1,143 @@
+/* =========================
+   RESET
+========================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* =========================
+   FONDO GENERAL (BLANCO)
+========================= */
+body {
+  font-family: "Segoe UI", Arial, sans-serif;
+  min-height: 100vh;
+  background: #f4f6f9; /* gris muy claro elegante */
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 20px;
+}
+
+/* =========================
+   FORMULARIO
+========================= */
+form {
+  width: 100%;
+  max-width: 380px;
+
+  background: #ffffff;
+  border-radius: 12px;
+
+  padding: 30px;
+
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+}
+
+/* =========================
+   TÍTULO
+========================= */
+form h2 {
+  text-align: center;
+  font-size: 24px;
+  font-weight: 700;
+  color: #1e293b;
+  margin-bottom: 20px;
+}
+
+/* =========================
+   LABELS
+========================= */
+label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: 600;
+  font-size: 14px;
+  color: #334155;
+}
+
+/* =========================
+   INPUTS
+========================= */
+input {
+  width: 100%;
+  padding: 11px;
+
+  border-radius: 8px;
+  border: 1px solid #d1d5db;
+
+  font-size: 14px;
+
+  margin-bottom: 14px;
+
+  transition: 0.2s;
+}
+
+input:focus {
+  outline: none;
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
+}
+
+/* =========================
+   BOTÓN PRINCIPAL
+========================= */
+button[type="submit"] {
+  width: 100%;
+  padding: 11px;
+
+  border: none;
+  border-radius: 8px;
+
+  background: #2563eb;
+  color: white;
+
+  font-weight: 700;
+  font-size: 14px;
+
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+button[type="submit"]:hover {
+  background: #1d4ed8;
+}
+
+/* =========================
+   TEXTO
+========================= */
+p {
+  margin-top: 14px;
+  text-align: center;
+  font-size: 14px;
+  color: #475569;
+}
+
+/* =========================
+   BOTÓN SECUNDARIO
+========================= */
+button[type="button"] {
+  width: 100%;
+  padding: 11px;
+
+  margin-top: 10px;
+
+  border-radius: 8px;
+  border: 1px solid #2563eb;
+
+  background: white;
+  color: #2563eb;
+
+  font-weight: 600;
+  font-size: 14px;
+
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+button[type="button"]:hover {
+  background: #eff6ff;
+}
