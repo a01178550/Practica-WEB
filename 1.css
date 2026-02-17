@@ -8,18 +8,103 @@
 }
 
 /* =========================
-   FONDO GENERAL (BLANCO)
+   BASE
 ========================= */
 body {
   font-family: "Segoe UI", Arial, sans-serif;
   min-height: 100vh;
-  background: #f4f6f9; /* gris muy claro elegante */
+  background: #f4f6f9;
+  margin: 0;
+}
 
+/* =========================
+   LAYOUT GENERAL
+========================= */
+.page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
+  padding: 30px 20px;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
+}
 
-  padding: 20px;
+/* Para login y registro centrados */
+body.auth main {
+  align-items: center;
+}
+
+/* =========================
+   HEADER
+========================= */
+header {
+  background: #ffffff;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.header-inner {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 14px 20px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.brand {
+  font-weight: 800;
+  font-size: 18px;
+  color: #1e293b;
+  text-decoration: none;
+}
+
+.top-nav {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.top-nav a {
+  text-decoration: none;
+  padding: 8px 10px;
+  border-radius: 8px;
+  color: #2563eb;
+  font-weight: 600;
+  border: 1px solid transparent;
+  transition: 0.2s;
+}
+
+.top-nav a:hover {
+  background: #eff6ff;
+  border-color: #bfdbfe;
+}
+
+/* =========================
+   FOOTER
+========================= */
+footer {
+  background: #ffffff;
+  border-top: 1px solid #e5e7eb;
+}
+
+.footer-inner {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 14px 20px;
+  color: #475569;
+  font-size: 14px;
+
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  flex-wrap: wrap;
 }
 
 /* =========================
@@ -40,7 +125,8 @@ form {
 /* =========================
    TÍTULO
 ========================= */
-form h2 {
+form h2,
+.card h2 {
   text-align: center;
   font-size: 24px;
   font-weight: 700;
@@ -85,7 +171,8 @@ input:focus {
 /* =========================
    BOTÓN PRINCIPAL
 ========================= */
-button[type="submit"] {
+button[type="submit"],
+.btn-primary {
   width: 100%;
   padding: 11px;
 
@@ -102,7 +189,8 @@ button[type="submit"] {
   transition: 0.2s;
 }
 
-button[type="submit"]:hover {
+button[type="submit"]:hover,
+.btn-primary:hover {
   background: #1d4ed8;
 }
 
@@ -119,7 +207,8 @@ p {
 /* =========================
    BOTÓN SECUNDARIO
 ========================= */
-button[type="button"] {
+button[type="button"],
+.btn-secondary {
   width: 100%;
   padding: 11px;
 
@@ -138,28 +227,34 @@ button[type="button"] {
   transition: 0.2s;
 }
 
-button[type="button"]:hover {
+button[type="button"]:hover,
+.btn-secondary:hover {
   background: #eff6ff;
 }
-/* ===== Card genérica para pantallas (menú/pantallas) ===== */
-.card{
+
+/* =========================
+   CARD GENÉRICA
+========================= */
+.card {
   width: 100%;
-  max-width: 420px;
+  max-width: 520px;
   background: #fff;
   padding: 30px;
   border-radius: 12px;
-  box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
 }
 
-/* ===== Menú ===== */
-.menu{
+/* =========================
+   MENÚ
+========================= */
+.menu {
   display: flex;
   flex-direction: column;
   gap: 12px;
   margin-top: 10px;
 }
 
-.menu-item{
+.menu-item {
   text-decoration: none;
   padding: 12px;
   border-radius: 8px;
@@ -170,6 +265,6 @@ button[type="button"]:hover {
   transition: 0.2s;
 }
 
-.menu-item:hover{
+.menu-item:hover {
   background: #eff6ff;
 }

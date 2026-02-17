@@ -2,7 +2,7 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
-  <title>Menú</title>
+  <title>Contacto</title>
   <link rel="stylesheet" href="1.css" />
 </head>
 
@@ -19,28 +19,37 @@
           <a href="perfil.html">Perfil</a>
           <a href="acerca.html">Acerca</a>
           <a href="contacto.html">Contacto</a>
-          <a href="Login.html">Cerrar sesión</a>
         </nav>
       </div>
     </header>
 
     <main>
-      <div class="card">
-        <h2>Menú</h2>
+      <form>
+        <h2>Contacto</h2>
 
-        <nav class="menu">
-          <a class="menu-item" href="pantalla1.html">Abrir Pantalla 1</a>
-          <a class="menu-item" href="perfil.html">Abrir Perfil</a>
-          <a class="menu-item" href="acerca.html">Abrir Acerca</a>
-          <a class="menu-item" href="contacto.html">Abrir Contacto</a>
-        </nav>
-      </div>
+        <label>Nombre</label>
+        <input type="text" placeholder="Tu nombre" />
+
+        <label>Correo</label>
+        <input type="email" placeholder="tucorreo@ejemplo.com" />
+
+        <label>Mensaje</label>
+        <input type="text" placeholder="Escribe tu mensaje (maqueta)" />
+
+        <button type="button" onclick="location.href='menu.html'">
+          Enviar (demo)
+        </button>
+
+        <button type="button" onclick="location.href='menu.html'">
+          Volver al menú
+        </button>
+      </form>
     </main>
 
     <footer>
       <div class="footer-inner">
         <span>© 2026 Mi Proyecto</span>
-        <span>Menú demo</span>
+        <span>Contacto demo</span>
       </div>
     </footer>
 

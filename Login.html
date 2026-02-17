@@ -1,33 +1,54 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
   <title>Login</title>
-  <link rel="stylesheet" href="1.css">
+  <link rel="stylesheet" href="1.css" />
 </head>
-<body>
 
-  <form>
-    <h2>Iniciar Sesión</h2>
+<body class="auth">
+  <div class="page">
 
-    <label for="email">Correo electrónico</label>
-    <input type="email" id="email" required>
+    <header>
+      <div class="header-inner">
+        <a class="brand" href="Login.html">Mi Proyecto</a>
 
-    <label for="password">Contraseña</label>
-    <input type="password" id="password" required>
+        <nav class="top-nav">
+          <a href="acerca.html">Acerca</a>
+          <a href="contacto.html">Contacto</a>
+        </nav>
+      </div>
+    </header>
 
-    <!-- Botón para entrar al menú -->
-    <button type="button" onclick="location.href='menu.html'">
-      Entrar
-    </button>
+    <main>
+      <form>
+        <h2>Iniciar Sesión</h2>
 
-    <p>¿No tienes cuenta?</p>
+        <label for="email">Correo electrónico</label>
+        <input type="email" id="email" required />
 
-    <!-- Botón para ir al registro -->
-    <button type="button" onclick="location.href='registro.html'">
-      Crear cuenta
-    </button>
-  </form>
+        <label for="password">Contraseña</label>
+        <input type="password" id="password" required />
 
+        <button type="button" onclick="location.href='menu.html'">
+          Entrar
+        </button>
+
+        <p>¿No tienes cuenta?</p>
+
+        <button type="button" onclick="location.href='Registro.html'">
+          Crear cuenta
+        </button>
+      </form>
+    </main>
+
+    <footer>
+      <div class="footer-inner">
+        <span>© 2026 Mi Proyecto</span>
+        <span>Login demo</span>
+      </div>
+    </footer>
+
+  </div>
 </body>
 </html>
