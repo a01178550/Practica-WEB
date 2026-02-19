@@ -19,6 +19,7 @@
           <a href="perfil.html">Perfil</a>
           <a href="acerca.html">Acerca</a>
           <a href="contacto.html">Contacto</a>
+          <a href="#" onclick="logout()">Cerrar sesión</a>
         </nav>
       </div>
     </header>
@@ -52,5 +53,10 @@
     </footer>
 
   </div>
+
+  <script src="auth.js"></script>
+  <script>
+    requireAuth();
+  </script>
 </body>
 </html>
