@@ -1,39 +1,62 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
   <title>Registro</title>
-  <link rel="stylesheet" href="1.css">
+  <link rel="stylesheet" href="1.css" />
 </head>
-<body>
 
-  <form>
-    <h2>Registro</h2>
+<body class="auth">
+  <div class="page">
 
-    <label>Nombre</label>
-    <input type="text" required>
+    <header>
+      <div class="header-inner">
+        <a class="brand" href="Login.html">Mi Proyecto</a>
 
-    <label>Apellidos</label>
-    <input type="text" required>
+        <nav class="top-nav">
+          <a href="acerca.html">Acerca</a>
+          <a href="contacto.html">Contacto</a>
+        </nav>
+      </div>
+    </header>
 
-    <label>Correo electrónico</label>
-    <input type="email" required>
+    <main>
+      <form>
+        <h2>Registro</h2>
 
-    <label>Teléfono</label>
-    <input type="tel">
+        <label>Nombre</label>
+        <input type="text" required />
 
-    <label>Contraseña</label>
-    <input type="password" required>
+        <label>Apellidos</label>
+        <input type="text" required />
 
-    <label>Confirmar contraseña</label>
-    <input type="password" required>
+        <label>Correo electrónico</label>
+        <input type="email" required />
 
-    <button type="submit">Crear cuenta</button>
+        <label>Teléfono</label>
+        <input type="tel" />
 
-    <button type="button" onclick="window.location.href='Login.html'">
-      Volver al login
-    </button>
-  </form>
+        <label>Contraseña</label>
+        <input type="password" required />
 
+        <label>Confirmar contraseña</label>
+        <input type="password" required />
+
+        <button type="submit">Crear cuenta</button>
+
+        <button type="button" onclick="window.location.href='Login.html'">
+          Volver al login
+        </button>
+      </form>
+    </main>
+
+    <footer>
+      <div class="footer-inner">
+        <span>© 2026 Mi Proyecto</span>
+        <span>Registro demo</span>
+      </div>
+    </footer>
+
+  </div>
 </body>
 </html>
