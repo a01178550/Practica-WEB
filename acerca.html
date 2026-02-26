@@ -15,27 +15,38 @@
 
         <nav class="top-nav">
           <a href="menu.html">Menú</a>
-          <a href="pantalla1.html">Pantalla 1</a>
+          <a href="pokedex.html">Pokédex</a>
           <a href="perfil.html">Perfil</a>
           <a href="acerca.html">Acerca</a>
           <a href="contacto.html">Contacto</a>
-          <a href="#" onclick="logout()">Cerrar sesión</a>
+          <a class="danger" href="#" onclick="logout()">Cerrar sesión</a>
         </nav>
       </div>
     </header>
 
     <main>
       <div class="card">
-        <h2>Acerca</h2>
-        <p>Esta sección explica el propósito del proyecto (maqueta).</p>
+        <h2>Acerca del Proyecto</h2>
 
         <div style="margin-top: 14px; text-align:left; color:#475569; font-size:14px; line-height:1.6;">
           <p>
-            Aquí puedes colocar una breve descripción del sistema:
-            objetivos, alcance y lo que contendrá cuando tenga funcionalidad.
+            Este proyecto es una maqueta funcional que simula un sistema
+            con autenticación básica y una Pokédex conectada a la API pública de Pokémon.
           </p>
+
           <p>
-            Por ahora solo es estructura de pantallas + navegación.
+            Incluye:
+          </p>
+
+          <ul style="margin-top:8px; padding-left:18px;">
+            <li>Login funcional con validación demo</li>
+            <li>Protección de rutas con localStorage</li>
+            <li>Pokédex con búsqueda por nombre</li>
+            <li>Diseño moderno y responsivo</li>
+          </ul>
+
+          <p style="margin-top:12px;">
+            Actualmente es una versión demostrativa sin base de datos real.
           </p>
         </div>
 

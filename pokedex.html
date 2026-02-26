@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Pokédex</title>
+  <link rel="stylesheet" href="1.css" />
+</head>
+
+<body>
+  <div class="page">
+
+    <header>
+      <div class="header-inner">
+        <a class="brand" href="menu.html">Mi Proyecto</a>
+
+        <nav class="top-nav">
+          <a href="menu.html">Menú</a>
+          <a href="pokedex.html">Pokédex</a>
+          <a href="perfil.html">Perfil</a>
+          <a href="acerca.html">Acerca</a>
+          <a href="contacto.html">Contacto</a>
+          <a class="danger" href="#" onclick="logout()">Cerrar sesión</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <div class="card">
+        <h2>Pokédex</h2>
+
+        <div class="pokedex-wrap">
+
+          <div class="pokedex-panel">
+            <h3>Buscar Pokémon</h3>
+
+            <div class="inline">
+              <input id="pokemonName" type="text" placeholder="Ej: pikachu, ditto, charizard" />
+              <button id="btnSearch" class="btn-primary" type="button">Buscar</button>
+            </div>
+
+            <div class="helper">
+              Tip: puedes escribir con espacios: <b>mr mime</b> (se convierte a <b>mr-mime</b>).
+            </div>
+
+            <div id="status" class="status">Escribe un nombre y presiona Buscar.</div>
+
+            <button class="btn-secondary" type="button" onclick="location.href='menu.html'">
+              Volver al menú
+            </button>
+          </div>
+
+          <div id="pokemon-container"></div>
+
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <div class="footer-inner">
+        <span>© 2026 Mi Proyecto</span>
+        <span>Pokédex demo</span>
+      </div>
+    </footer>
+
+  </div>
+
+  <!-- IMPORTANTE: orden de scripts -->
+  <script src="auth.js"></script>
+  <script src="pokemon.js"></script>
+  <script>
+    requireAuth();
+    initPokemonPage("ditto");
+  </script>
+</body>
+</html>

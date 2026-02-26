@@ -1,5 +1,3 @@
-// auth.js
-
 function requireAuth() {
   if (localStorage.getItem("isLoggedIn") !== "true") {
     window.location.href = "Login.html";
