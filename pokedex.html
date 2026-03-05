@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <title>Pokédex</title>
-  <link rel="stylesheet" href="1.css" />
+  <link rel="stylesheet" href="./1.css" />
 </head>
 
 <body>
@@ -28,30 +28,50 @@
       <div class="card">
         <h2>Pokédex</h2>
 
-        <div class="pokedex-wrap">
+        <!--  Vista LISTA -->
+        <div id="listView">
+          <div class="pokedex-panel" style="margin-bottom:16px;">
+            <h3>Buscar / Filtros</h3>
 
-          <div class="pokedex-panel">
-            <h3>Buscar Pokémon</h3>
+            <div class="filters">
+              <div>
+                <label for="filterName">Nombre</label>
+                <input id="filterName" type="text" placeholder="Ej: pika, char, bulba..." />
+              </div>
 
-            <div class="inline">
-              <input id="pokemonName" type="text" placeholder="Ej: pikachu, ditto, charizard" />
-              <button id="btnSearch" class="btn-primary" type="button">Buscar</button>
+              <div>
+                <label for="filterId">ID Pokédex</label>
+                <input id="filterId" type="number" min="1" placeholder="Ej: 25" />
+              </div>
+
+              <div>
+                <label for="filterType">Tipo</label>
+                <select id="filterType">
+                  <option value="">Cargando tipos...</option>
+                </select>
+              </div>
             </div>
 
-            <div class="helper">
-              Tip: puedes escribir con espacios: <b>mr mime</b> (se convierte a <b>mr-mime</b>).
+            <div class="filters-actions">
+              <button id="btnApply" class="btn-primary" type="button">Aplicar filtros</button>
+              <button id="btnClear" class="btn-secondary" type="button">Limpiar</button>
             </div>
 
-            <div id="status" class="status">Escribe un nombre y presiona Buscar.</div>
-
-            <button class="btn-secondary" type="button" onclick="location.href='menu.html'">
-              Volver al menú
-            </button>
+            <div id="statusList" class="status">Cargando Pokédex...</div>
           </div>
 
-          <div id="pokemon-container"></div>
+          <div id="grid" class="dex-grid"></div>
 
+          <div class="list-actions">
+            <button id="btnLoadMore" class="btn-secondary" type="button">Cargar más</button>
+          </div>
         </div>
+
+        <!--  Vista DETALLE -->
+        <div id="detailView" style="display:none;">
+          <div id="pokemon-container"></div>
+        </div>
+
       </div>
     </main>
 
@@ -64,12 +84,11 @@
 
   </div>
 
-  <!-- IMPORTANTE: orden de scripts -->
   <script src="auth.js"></script>
-  <script src="pokemon.js"></script>
+  <script src="pokedex_page.js"></script>
   <script>
     requireAuth();
-    initPokemonPage("ditto");
+    initPokedexPage(); // maneja lista y detalle
   </script>
 </body>
 </html>
