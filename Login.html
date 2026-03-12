@@ -30,7 +30,7 @@
         <input type="password" id="password" required placeholder="1234" />
 
         <p id="errorMsg" style="display:none; color:#dc2626; font-weight:600; margin-top:0;">
-          Credenciales incorrectas.
+          Correo o contraseña incorrectos.
         </p>
 
         <button type="submit">Entrar</button>
@@ -53,11 +53,9 @@
   </div>
 
   <script>
-    // Credenciales demo (puedes cambiarlas)
-    const DEMO_USER = {
-      email: "demo@demo.com",
-      password: "1234"
-    };
+    // Credenciales demo
+    const DEMO_EMAIL = "demo@demo.com";
+    const DEMO_PASS  = "1234";
 
     const form = document.getElementById("loginForm");
     const errorMsg = document.getElementById("errorMsg");
@@ -66,21 +64,15 @@
       e.preventDefault();
 
       const email = document.getElementById("email").value.trim().toLowerCase();
-      const password = document.getElementById("password").value;
+      const pass  = document.getElementById("password").value;
 
-      const ok = (email === DEMO_USER.email && password === DEMO_USER.password);
-
-      if (!ok) {
+      if (email === DEMO_EMAIL && pass === DEMO_PASS) {
+        localStorage.setItem("isLoggedIn", "true");
+        localStorage.setItem("userEmail", email);
+        window.location.href = "menu.html";
+      } else {
         errorMsg.style.display = "block";
-        return;
       }
-
-      // Guardar "sesión"
-      localStorage.setItem("isLoggedIn", "true");
-      localStorage.setItem("userEmail", email);
-
-      // Redirigir
-      window.location.href = "menu.html";
     });
   </script>
 </body>

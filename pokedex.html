@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Pokédex</title>
+  <link rel="stylesheet" href="./1.css" />
+</head>
+
+<body>
+  <div class="page">
+
+    <header>
+      <div class="header-inner">
+        <a class="brand" href="menu.html">Mi Proyecto</a>
+
+        <nav class="top-nav">
+          <a href="menu.html">Menú</a>
+          <a href="pokedex.html">Pokédex</a>
+          <a href="perfil.html">Perfil</a>
+          <a href="acerca.html">Acerca</a>
+          <a href="contacto.html">Contacto</a>
+          <a class="danger" href="#" onclick="logout()">Cerrar sesión</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <div class="card">
+        <h2>Pokédex</h2>
+
+        <!--  Vista LISTA -->
+        <div id="listView">
+          <div class="pokedex-panel" style="margin-bottom:16px;">
+            <h3>Buscar / Filtros</h3>
+
+            <div class="filters">
+              <div>
+                <label for="filterName">Nombre</label>
+                <input id="filterName" type="text" placeholder="Ej: pika, char, bulba..." />
+              </div>
+
+              <div>
+                <label for="filterId">ID Pokédex</label>
+                <input id="filterId" type="number" min="1" placeholder="Ej: 25" />
+              </div>
+
+              <div>
+                <label for="filterType">Tipo</label>
+                <select id="filterType">
+                  <option value="">Cargando tipos...</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="filters-actions">
+              <button id="btnApply" class="btn-primary" type="button">Aplicar filtros</button>
+              <button id="btnClear" class="btn-secondary" type="button">Limpiar</button>
+            </div>
+
+            <div id="statusList" class="status">Cargando Pokédex...</div>
+          </div>
+
+          <div id="grid" class="dex-grid"></div>
+
+          <div class="list-actions">
+            <button id="btnLoadMore" class="btn-secondary" type="button">Cargar más</button>
+          </div>
+        </div>
+
+        <!--  Vista DETALLE -->
+        <div id="detailView" style="display:none;">
+          <div id="pokemon-container"></div>
+        </div>
+
+      </div>
+    </main>
+
+    <footer>
+      <div class="footer-inner">
+        <span>© 2026 Mi Proyecto</span>
+        <span>Pokédex demo</span>
+      </div>
+    </footer>
+
+  </div>
+
+  <script src="auth.js"></script>
+  <script src="pokedex_page.js"></script>
+  <script>
+    requireAuth();
+    initPokedexPage(); // maneja lista y detalle
+  </script>
+</body>
+</html>

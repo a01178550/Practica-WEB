@@ -15,10 +15,11 @@
 
         <nav class="top-nav">
           <a href="menu.html">Menú</a>
-          <a href="pantalla1.html">Pantalla 1</a>
+          <a href="pokedex.html">Pokédex</a>
           <a href="perfil.html">Perfil</a>
           <a href="acerca.html">Acerca</a>
           <a href="contacto.html">Contacto</a>
+          <a class="danger" href="#" onclick="logout()">Cerrar sesión</a>
         </nav>
       </div>
     </header>
@@ -28,16 +29,16 @@
         <h2>Contacto</h2>
 
         <label>Nombre</label>
-        <input type="text" placeholder="Tu nombre" />
+        <input type="text" placeholder="Tu nombre" required />
 
         <label>Correo</label>
-        <input type="email" placeholder="tucorreo@ejemplo.com" />
+        <input type="email" placeholder="tucorreo@ejemplo.com" required />
 
         <label>Mensaje</label>
-        <input type="text" placeholder="Escribe tu mensaje (maqueta)" />
+        <input type="text" placeholder="Escribe tu mensaje (demo)" required />
 
-        <button type="button" onclick="location.href='menu.html'">
-          Enviar (demo)
+        <button type="button" onclick="alert('Mensaje enviado (demo)')">
+          Enviar
         </button>
 
         <button type="button" onclick="location.href='menu.html'">
@@ -54,5 +55,10 @@
     </footer>
 
   </div>
+
+  <script src="auth.js"></script>
+  <script>
+    requireAuth();
+  </script>
 </body>
 </html>

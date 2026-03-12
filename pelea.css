@@ -1,0 +1,207 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(180deg, #eaf4ff 0%, #f8fbff 100%);
+  color: #1d2a35;
+}
+
+.battle-page {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 24px;
+}
+
+.title {
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.battle-layout {
+  display: grid;
+  grid-template-columns: 1fr 320px 1fr;
+  gap: 20px;
+  align-items: start;
+}
+
+.pokemon-card,
+.turn-box,
+.rules-box,
+.history-section,
+.winner-section {
+  background: #ffffff;
+  border-radius: 18px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  padding: 18px;
+}
+
+.pokemon-card h2 {
+  text-align: center;
+  margin-top: 0;
+}
+
+.pokemon-image-wrap {
+  width: 100%;
+  height: 250px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f3f7fb;
+  border-radius: 16px;
+  margin-bottom: 16px;
+}
+
+.pokemon-image-wrap img {
+  max-width: 90%;
+  max-height: 90%;
+  object-fit: contain;
+}
+
+.life-box {
+  margin-bottom: 16px;
+}
+
+.life-label {
+  display: flex;
+  justify-content: space-between;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+.life-bar {
+  width: 100%;
+  height: 22px;
+  background: #dbe5ef;
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+.life-fill {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, #33c759, #28a745);
+  transition: width 0.35s ease;
+}
+
+.stats-mini p {
+  margin: 6px 0;
+}
+
+.battle-center {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.turn-box {
+  min-height: 180px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.turn-box h2 {
+  margin-top: 0;
+  text-align: center;
+}
+
+.turn-box p {
+  text-align: center;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.actions {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.btn-primary,
+.btn-secondary {
+  border: none;
+  padding: 14px 16px;
+  border-radius: 12px;
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.btn-primary {
+  background: #2563eb;
+  color: #fff;
+}
+
+.btn-primary:hover {
+  background: #1d4ed8;
+}
+
+.btn-secondary {
+  background: #e5e7eb;
+  color: #111827;
+}
+
+.btn-secondary:hover {
+  background: #d1d5db;
+}
+
+.rules-box h3 {
+  margin-top: 0;
+}
+
+.history-section {
+  margin-top: 24px;
+}
+
+.history-box {
+  max-height: 280px;
+  overflow-y: auto;
+  background: #f8fafc;
+  border-radius: 12px;
+  padding: 12px;
+}
+
+.history-item {
+  padding: 10px 12px;
+  border-bottom: 1px solid #dbe5ef;
+  line-height: 1.45;
+}
+
+.history-item:last-child {
+  border-bottom: none;
+}
+
+.winner-section {
+  margin-top: 24px;
+  text-align: center;
+}
+
+.winner-section img {
+  max-width: 260px;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+#winner-name {
+  font-size: 24px;
+  font-weight: bold;
+  margin-top: 12px;
+}
+
+.hidden {
+  display: none;
+}
+
+@media (max-width: 980px) {
+  .battle-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .battle-center {
+    order: -1;
+  }
+}

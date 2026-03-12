@@ -19,14 +19,17 @@
           <a href="perfil.html">Perfil</a>
           <a href="acerca.html">Acerca</a>
           <a href="contacto.html">Contacto</a>
+          <a href="#" onclick="logout()">Cerrar sesión</a>
         </nav>
       </div>
     </header>
 
     <main>
       <div class="card">
-        <h2>Pantalla 1</h2>
-        <p>Esta es la pantalla que abriste desde el menú.</p>
+        <h2>Pantalla 1 - Información de Pokémon</h2>
+        <div id="pokemon-container" style="text-align: center;">
+          <p>Cargando datos del Pokémon...</p>
+        </div>
 
         <button type="button" onclick="location.href='menu.html'">
           Volver al menú
@@ -42,5 +45,12 @@
     </footer>
 
   </div>
+
+  <script src="auth.js"></script>
+  <script src="pokemon.js"></script>
+  <script>
+    requireAuth();
+    initPokemonData();
+  </script>
 </body>
 </html>
