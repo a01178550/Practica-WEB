@@ -713,3 +713,67 @@ body.detail-mode .card{
 .stat-line{
   grid-template-columns: 90px 50px 1fr;
 }
+.battle-menu-box {
+  margin-top: 28px;
+  padding: 20px;
+  border: 1px solid #dbe4ff;
+  border-radius: 16px;
+  background: #f8fbff;
+}
+
+.battle-menu-box h2 {
+  margin: 0 0 10px;
+  text-align: center;
+  color: #1e3a8a;
+}
+
+.battle-menu-box p {
+  text-align: center;
+  margin-bottom: 14px;
+}
+
+.battle-form {
+  display: grid;
+  grid-template-columns: 1fr 1fr auto;
+  gap: 12px;
+  align-items: center;
+}
+
+.battle-form input {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1px solid #b9c7ff;
+  border-radius: 12px;
+  font-size: 15px;
+}
+
+.battle-form button {
+  padding: 12px 18px;
+  border: none;
+  border-radius: 12px;
+  background: #2563eb;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.battle-form button:hover {
+  background: #1d4ed8;
+}
+
+.battle-status {
+  min-height: 24px;
+  margin-top: 12px;
+  font-weight: 600;
+  color: #1e40af;
+}
+
+.battle-status.error {
+  color: #dc2626;
+}
+
+@media (max-width: 768px) {
+  .battle-form {
+    grid-template-columns: 1fr;
+  }
+}
